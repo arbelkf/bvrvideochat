@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>BVR Pro</title>
+  <link rel='icon' href='img/favicon.ico' type='image/x-icon'/ >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600&family=Josefin+Slab&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/styles1.css">
+
+  <!-- <link rel="stylesheet" href="/css/main.css" /> -->
+
+</head>
+
+<body class="">
+<div class="container" id="video_display">
+<div class="row align-items-center justify-content-center">
+<div class="col-sm-3"> 
+
+<a href="#" class="navbar-left"><img src="img/logo.png"></a>
+</div>
+<div class="col-sm-9">
+<h2 class="text-center">Background Video Recorder Pro</h2>
+<h3 class="text-center">Home Security edition</h3>
+<h3 class="text-center">We Secure U</h3>
+
+</div>
+</div>
+ <div class="row">   
+
+<div class="col-sm-6">
+<h5>Instructions - phone, do one of the following: </h5><br/>
+<ol><li>Home Security : scan <b>QR</b> code.</li><li>Settings: google drive : log in</li><li>Settings: home security: enter email</li></ol>
+And then:<ol>
+<li>Settings: home security: home security: enabled</li>
+<li>Settings: home security: Stream to: PC</li></ol>
+</div>
+<div class="col-sm-6">
+
+<h5>Instructions - web site, on the pop-up:</h5><br/>
+Press cancel to show the QR code or enter email<br/>
+<img id='qrcode' src=''>
+
+</div>
+</div>
+  <br/>
+<div class="row">
+   <div class="col-sm-8" id="div2">
+   <div class="card" style="border-radius:3%">
+   <h4>Phone Remote Stream</h4>
+				<video id="remoteVideo" class="player" autoplay playsinline></video>
+			</div>
+	</div>
+			
+      <div class="col-sm-4" id="div1" style="">
+	  <div class="row">
+      <div class="col-sm-12 card" style="border-radius:3%">
+	  <h4>Webcam Stream</h4>
+				<video id="localVideo" class="player" autoplay muted playsinline></video>
+				</div>
+			 <div class="row">
+			 <div class="col-sm-6 card" style="border-radius:3%">   	  
+			<img id="image1" src="" alt=" ">
+			<span id="txt1" ></span>
+		</div>
+		<div class="col-sm-6 card" style="border-radius:3%">   	  
+			<img id="image2" src="" alt=" ">
+			<span id="txt2" ></span>
+		</div>
+		</div>
+		 <div class="row">
+		<div class="col-sm-6 card" style="border-radius:3%">   	  
+			<img id="image3" src="" alt=" ">
+			<span id="txt3" ></span>
+		</div><div class="col-sm-6 card" style="border-radius:3%">   	  
+			<img id="image4" src="" alt=" ">
+			<span id="txt4" ></span>
+		</div>
+			</div>
+			<div class="row">
+			<div class="col-sm-6 card" style="border-radius:3%">   	  
+			<img id="image5" src="" alt=" ">
+			<span id="txt5" ></span>
+		</div>
+		
+		<div class="col-sm-6 card" style="border-radius:3%">   	  
+			<img id="image6" src="" alt=" ">
+			<span id="txt6" ></span>
+		</div>
+		</div>
+			
+	</div>
+	</div>
+</div>
+<div id="images">  
+  <div class="row">
+
+	  
+		
+
+	
+	   <div class="col-sm-2 card" style="border-radius:3%">   	  
+			<img id="image7" src="" alt=" ">
+			<span id="txt7" ></span>
+		</div>
+		<div class="col-sm-2 card" style="border-radius:3%">   	  
+			<img id="image8" src="" alt=" ">
+			<span id="txt8" ></span>
+		</div>
+		<div class="col-sm-2 card" style="border-radius:3%">   	  
+			<img id="image9" src="" alt=" ">
+			<span id="txt9" ></span>
+		</div><div class="col-sm-2 card" style="border-radius:3%">   	  
+			<img id="image10" src="" alt=" ">
+			<span id="txt10" ></span>
+		</div>
+		
+		<div class="col-sm-2 card" style="border-radius:3%">   	  
+			<img id="image11" src="" alt=" ">
+			<span id="txt11" ></span>
+		</div>
+		<div class="col-sm-2 card" style="border-radius:3%">   	  
+			<img id="image12" src="" alt=" ">
+			<span id="txt12" ></span>
+		</div>
+		</div>
+  </div>
+   <div class="row">
+   <div class="col-sm-12">   
+  <div id="buttons">
+        <button id="startButton" disabled>Start</button>
+        <button id="sendButton"  disabled>Send</button>
+        <button id="closeButton" disabled>Stop</button>
+		<button id="stopAudioButton">Stop alarm</button>
+    </div>
+	</div>
+	  </div>
+	  <div class="row">
+    <div class="col-sm-6"  style="width: 100%; float: left;">
+        <div id="receive">
+            <h2>Receive</h2>
+            <textarea id="dataChannelReceive" disabled style="width: 100%; float: left;"></textarea>
+        </div>
+    </div>
+	
+   <div class="col-sm-6"  style="width: 100%; float: left;">
+      <div id="sendReceive">
+        <div id="send">
+            <h2>Send</h2>
+            <textarea id="dataChannelSend"  style="width: 100%; float: left;"
+                      placeholder="."></textarea>
+        </div>
+		</div>
+	</div>
+		
+  </div>
+  
+	  
+</div>
+
+
+<!-- JS -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+  <!-- Import SocketIO for signalling -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Import WebRTC adapter for compatibility with all the browsers  -->
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  
+  <!-- Import TURN config -->
+  <script src="js\config.js"></script>
+
+  <!-- Import script containing WebRTC related functions -->
+  <script src="js\main.js"></script>
+  <script type="text/javascript" id="cookiebanner"
+  src="https://cdn.jsdelivr.net/gh/dobarkod/cookie-banner@1.2.2/dist/cookiebanner.min.js"></script>
+</body>
+
+</html>
